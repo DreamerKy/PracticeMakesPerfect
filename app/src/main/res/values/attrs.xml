@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="MySwitch">
+
+  <attr name="slideDrawable" format="reference"/>
+
+  <attr name="isChecked" format="boolean"/>
+
+  </declare-styleable>
+
+  <declare-styleable name="DragBubbleView">
+    <attr name="bubble_radius" format="dimension"/>
+    <attr name="bubble_color" format="color"/>
+    <attr name="bubble_text" format="string"/>
+    <attr name="bubble_textSize" format="dimension"/>
+    <attr name="bubble_textColor" format="color"/>
+  </declare-styleable>
+
+  <declare-styleable name="MiClockView">
+    <attr name="backgroundColor" format="color" />
+    <attr name="lightColor" format="color" />
+    <attr name="darkColor" format="color" />
+    <attr name="textSize" format="dimension" />
+  </declare-styleable>
+
+  <declare-styleable name="LoadingView">
+    <attr name="ball_color" format="color"/>
+    <attr name="line_width" format="dimension"/>
+    <attr name="line_color" format="color"/>
+    <attr name="stroke_width" format="dimension"/>
+    <attr name="ball_radius" format="dimension"/>
+    <attr name="max_down" format="dimension"/>
+    <attr name="max_up" format="dimension"/>
+  </declare-styleable>
+
+  <declare-styleable name="DropdownView">
+    <attr format="dimension" name="subHeight"/>
+    <attr format="dimension" name="subWidth"/>
+    <attr format="reference" name="rotateImg"/>
+  </declare-styleable>
+
+  <declare-styleable name="CheckView">
+    <attr name="text" format="string"/>
+    <attr name="checked" format="boolean"/>
+
+  </declare-styleable>
+
+  <!--switchButton-->
+  <declare-styleable name="SwitchButton">
+    <attr format="reference" name="kswThumbDrawable"/>
+    <attr format="color|reference" name="kswThumbColor"/>
+    <attr format="dimension|reference" name="kswThumbMargin"/>
+    <attr format="dimension|reference" name="kswThumbMarginTop"/>
+    <attr format="dimension|reference" name="kswThumbMarginBottom"/>
+    <attr format="dimension|reference" name="kswThumbMarginLeft"/>
+    <attr format="dimension|reference" name="kswThumbMarginRight"/>
+    <attr format="dimension|reference" name="kswThumbWidth"/>
+    <attr format="dimension|reference" name="kswThumbHeight"/>
+    <attr format="dimension|reference" name="kswThumbRadius"/>
+    <attr format="dimension|reference" name="kswBackRadius"/>
+    <attr format="reference" name="kswBackDrawable"/>
+    <attr format="color|reference" name="kswBackColor"/>
+    <attr format="boolean" name="kswFadeBack"/>
+    <attr format="float" name="kswBackMeasureRatio"/>
+    <attr format="integer" name="kswAnimationDuration"/>
+    <attr format="color|reference" name="kswTintColor"/>
+    <attr format="string" name="kswTextOn"/>
+    <attr format="string" name="kswTextOff"/>
+    <attr format="dimension" name="kswTextMarginH"/>
+    <attr format="color" name="colorAccent"/>
+    <attr format="boolean" name="kswAutoAdjustTextPosition"/>
+  </declare-styleable>
+
+  <declare-styleable name="DYLoadingView">
+    <attr name="radius1" format="dimension"/>
+    <attr name="radius2" format="dimension"/>
+    <attr name="rtlScale" format="float"/>
+    <attr name="ltrScale" format="float"/>
+    <attr name="color1" format="color"/>
+    <attr name="color2" format="color"/>
+    <attr name="mixColor" format="color"/>
+    <attr name="duration" format="integer"/>
+    <attr name="pauseDuration" format="integer"/>
+    <attr name="gap" format="dimension"/>
+    <attr name="scaleStartFraction" format="float"/>
+    <attr name="scaleEndFraction" format="float"/>
+  </declare-styleable>
+
+  <declare-styleable name="CirclePercentView" >
+    <attr name="circleBg" format="color"/>
+    <attr name="arcColor" format="color"/>
+    <attr name="arcWidth" format="dimension"/>
+    <attr name="percentTextColor" format="color"/>
+    <attr name="percentTextSize" format="dimension"/>
+    <attr name="viewRadius" format="dimension"/>
+  </declare-styleable>
+
+  <declare-styleable name="materialStatusProgressAttr">
+    <attr name="arcColor2" format="reference|color"/>
+    <attr name="progressBarBorderWidth" format="dimension"/>
+  </declare-styleable>
+
+  <!-- 仪表盘自定义属性 -->
+  <attr name="color_dial_lower" format="color"/>
+  <attr name="color_dial_middle" format="color"/>
+  <attr name="color_dial_high" format="color"/>
+  <attr name="text_size_dial" format="dimension"/>
+  <attr name="stroke_width_dial" format="dimension"/>
+  <attr name="radius_circle_dial" format="dimension"/>
+  <attr name="text_title_dial" format="string"/>
+  <attr name="text_title_size" format="dimension"/>
+  <attr name="text_title_color" format="color"/>
+  <attr name="text_size_value" format="dimension"/>
+  <attr name="animator_play_time" format="integer"/>
+
+  <declare-styleable name="ClockView">
+    <attr name="color_dial_lower"/>
+    <attr name="color_dial_middle"/>
+    <attr name="color_dial_high"/>
+    <attr name="text_size_dial"/>
+    <attr name="stroke_width_dial"/>
+    <attr name="radius_circle_dial"/>
+    <attr name="text_title_dial"/>
+    <attr name="text_title_size"/>
+    <attr name="text_title_color"/>
+    <attr name="text_size_value"/>
+    <attr name="animator_play_time"/>
+  </declare-styleable>
+
+</resources>

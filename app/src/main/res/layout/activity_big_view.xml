@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.dreams.widget.ScalableImageView
+        android:id="@+id/myBigView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+<!--    <com.example.dreams.widget.MyBigView-->
+<!--        android:id="@+id/myBigView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_centerInParent="true" />-->
+
+<!--    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView-->
+<!--        android:id="@+id/myBigView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+</RelativeLayout>

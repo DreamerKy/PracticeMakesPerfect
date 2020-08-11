@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".SearchViewActivity">
+
+    <com.example.dreams.widget.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="霸王生发剂" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="尾椎骨康复指南" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="农夫三拳" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="艾迪达斯官网" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="漫步者"
+            android:textSize="18sp" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="New Balance NB官网" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="龙泉宝剑 手工锻造" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="三只松鼠" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="PUMA彪马官方旗舰"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="小熊电炖锅" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="3M" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="茅台 MOUTAI" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="hp电脑包京东自营" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="hello,word" />
+        <TextView
+            style="@style/text_flag_01"
+            android:text="双立人刀具套装" />
+
+
+
+
+    </com.example.dreams.widget.FlowLayout>
+
+</RelativeLayout>

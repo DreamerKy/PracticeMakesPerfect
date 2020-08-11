@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context="com.example.dreams.PracticeMakesPerfectActivity">
+
+    <!--
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            />
+    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_wang_yi"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="MusicAnim" />
+
+                <Button
+                    android:id="@+id/btn_splash"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:lines="1"
+                    android:text="SplashView" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_slide"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="SlideView" />
+
+                <Button
+                    android:id="@+id/btn_bubble"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:lines="1"
+                    android:text="DragBubble" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_loading"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="LOADING" />
+
+                <Button
+                    android:id="@+id/btn_draw_bezier"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:lines="1"
+                    android:text="BEZIERDRAWER" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_water_ripple"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="WATERRIPPLE" />
+
+                <Button
+                    android:id="@+id/btn_skin"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:lines="1"
+                    android:text="SKINAPP" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/red_paper"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="REDPAPER" />
+
+                <Button
+                    android:id="@+id/mi_clock"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:lines="1"
+                    android:text="MICLOCK" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/progress_animate"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="PROGREAA" />
+
+                <Button
+                    android:id="@+id/plugin_app"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="PLUGIN" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/method_hook"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="HOOK" />
+
+                <Button
+                    android:id="@+id/plugin_hook"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="PLUGIN_HOOK" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_view_pager"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="VIEW_PAGER" />
+
+                <Button
+                    android:id="@+id/my_switch"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="MINE_SWITCH" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_loading"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="HUAWEI_LOADING" />
+
+                <Button
+                    android:id="@+id/my_hook_view"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="PATH_MEASURE_HOOK" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_eraser_view"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="ERASER_VIEW" />
+
+                <Button
+                    android:id="@+id/my_big_view"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="BIG_VIEW" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_search_view"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="SEARCH_VIEW" />
+
+                <Button
+                    android:id="@+id/my_event_bus_test"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="EVENT_BUS" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_flow_layout"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="FLOW_LAYOUT" />
+
+                <Button
+                    android:id="@+id/my_key_board_layout"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="KEY_BOARD_LAYOUT" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_key_board_layout2"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="KEY_BOARD_LAYOUT2" />
+
+                <Button
+                    android:id="@+id/my_fragment"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="MY_FRAGMENT" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_degree"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="MY_DEGREE" />
+
+                <Button
+                    android:id="@+id/my_clock"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="MY_CLOCK" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/my_camera"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:text="MY_CAMERA" />
+
+                <Button
+                    android:id="@+id/my_flip"
+                    android:layout_width="150dp"
+                    android:lines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="FLIPVIEW" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

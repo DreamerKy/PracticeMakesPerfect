@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/QrCodeScan.iml" filepath="$PROJECT_DIR$/QrCodeScan.iml" group="QrCodeScan" />
+      <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" group="QrCodeScan/annotation" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="QrCodeScan/app" />
+      <module fileurl="file://$PROJECT_DIR$/arouterapi/arouterapi.iml" filepath="$PROJECT_DIR$/arouterapi/arouterapi.iml" group="QrCodeScan/arouterapi" />
+      <module fileurl="file://$PROJECT_DIR$/asm_lifecycle_plugin_module/asm_lifecycle_plugin_module.iml" filepath="$PROJECT_DIR$/asm_lifecycle_plugin_module/asm_lifecycle_plugin_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blockmonitor/blockmonitor.iml" filepath="$PROJECT_DIR$/blockmonitor/blockmonitor.iml" group="QrCodeScan/blockmonitor" />
+      <module fileurl="file://$PROJECT_DIR$/compiler/compiler.iml" filepath="$PROJECT_DIR$/compiler/compiler.iml" group="QrCodeScan/compiler" />
+      <module fileurl="file://$PROJECT_DIR$/datastructure/datastructure.iml" filepath="$PROJECT_DIR$/datastructure/datastructure.iml" group="QrCodeScan/datastructure" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dynamicproxy/dynamicproxy.iml" filepath="$PROJECT_DIR$/.idea/modules/dynamicproxy/dynamicproxy.iml" group="QrCodeScan/dynamicproxy" />
+      <module fileurl="file://$PROJECT_DIR$/myeventbus/myeventbus.iml" filepath="$PROJECT_DIR$/myeventbus/myeventbus.iml" group="QrCodeScan/myeventbus" />
+      <module fileurl="file://$PROJECT_DIR$/order/order.iml" filepath="$PROJECT_DIR$/order/order.iml" group="QrCodeScan/order" />
+      <module fileurl="file://$PROJECT_DIR$/skinlibrary/skinlibrary.iml" filepath="$PROJECT_DIR$/skinlibrary/skinlibrary.iml" group="QrCodeScan/skinlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/stander/stander.iml" filepath="$PROJECT_DIR$/stander/stander.iml" group="QrCodeScan/stander" />
+      <module fileurl="file://$PROJECT_DIR$/viewtouchevent/viewtouchevent.iml" filepath="$PROJECT_DIR$/viewtouchevent/viewtouchevent.iml" group="QrCodeScan/viewtouchevent" />
+    </modules>
+  </component>
+</project>

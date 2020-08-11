@@ -1,0 +1,3 @@
+include ':dynamicproxy'
+include ':app', ':viewtouchevent', ':datastructure', ':skinlibrary', ':compiler', ':annotation', ':arouterapi', ':order', ':stander', ':myeventbus'
+include ':blockmonitor'

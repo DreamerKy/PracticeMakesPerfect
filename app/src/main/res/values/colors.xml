@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorYellow">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="line">#E0E0E0</color>
+    <color name="transparent">#00000000</color>
+    <color name="ydx_color_587698">#587698</color>
+    <color name="ydx_color_9223FF">#9223FF</color>
+    <color name="ydx_color_E4EEFF">#E4EEFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <array name="splash_circle_colors">
+        <item>@color/colorAccent</item>
+        <item>@color/ydx_color_587698</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/ydx_color_9223FF</item>
+        <item>@color/ydx_color_E4EEFF</item>
+        <item>@color/colorPrimary</item>
+    </array>
+
+    <!-- 换肤对应皮肤包颜色 -->
+    <color name="skin_background">#008577</color>
+    <color name="skin_textColor">#000000</color>
+    <color name="skin_item_color">#FFFFFF</color>
+
+    <color name="rippleColor">#C0362E</color>
+
+    <color name="keyboard_pressed">#E8EEF3</color>
+    <color name="keyboard_no_press">#FFFFFFFF</color>
+
+    <color name="popular">#ff76a5</color>
+    <color name="star">#ff0057</color>
+</resources>
