@@ -1,7 +1,5 @@
 package com.kotlin.vip.datastructure.algorithm;
 
-import com.kotlin.vip.datastructure.leetcode.LC_104_TheDepthOfBinaryTree;
-
 /**
  * Created by liuyubobobo.
  */
