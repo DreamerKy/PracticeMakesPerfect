@@ -1,6 +1,7 @@
 package com.kotlin.vip.datastructure.leetcode;
 
 /**
+ * Practiced by likaiyu on 2020/8/14.
  * Created by likaiyu on 2020/3/14.
  * 二叉树最小深度
  *
@@ -12,8 +13,17 @@ package com.kotlin.vip.datastructure.leetcode;
  * 当 root 节点左右孩子都不为空时，返回左右孩子较小深度的节点值
  *
  */
-public class LC_111_TheMinDepthOfTree_200314 {
+public class LC_111_TheMinDepthOfTree_200814 {
 
+    public int minDepth2(TreeNode root) {
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) return 1;
+        if (root.left != null && root.right != null) {
+            return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
+        } else {
+            return (root.left != null ? minDepth(root.left) : minDepth(root.right)) + 1;
+        }
+    }
 
     public int minDepth(TreeNode root) {
         if (root == null) {
