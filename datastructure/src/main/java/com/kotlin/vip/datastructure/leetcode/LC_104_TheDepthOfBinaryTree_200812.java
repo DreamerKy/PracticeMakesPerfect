@@ -1,10 +1,31 @@
 package com.kotlin.vip.datastructure.leetcode;
 
 /**
+ * Practiced by likaiyu on 2020/8/12.
  * Created by likaiyu on 2020/3/12.
- * 二叉树最大深度
+ * 给定一个二叉树，找出其最大深度。
+ *
+ * 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+ * 说明: 叶子节点是指没有子节点的节点。
+ * 给定二叉树 [3,9,20,null,null,15,7]，
+ *     3
+ *    / \
+ *   9  20
+ *     /  \
+ *    15   7
+ *
+ * 返回它的最大深度 3 。
  */
-public class LC_104_TheDepthOfBinaryTree_200312 {
+public class LC_104_TheDepthOfBinaryTree_200812 {
+
+    public int maxDepth3(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = maxDepth3(root.left) + 1;
+        int right = maxDepth3(root.right) + 1;
+        return Math.max(left, right);
+    }
 
     public int maxDepth(TreeNode root){
         //找递归出口

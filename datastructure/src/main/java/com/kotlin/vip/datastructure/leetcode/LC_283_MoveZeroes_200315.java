@@ -16,7 +16,6 @@ public class LC_283_MoveZeroes_200315 {
     public static void moveZero(int[] nums) {
         int j = 0;//j碰到靠前的0就停下来，i继续后移来寻找非0元素，找到后交换
         for (int i = 0; i < nums.length; i++) {
-            System.out.println(i);
             if (nums[i] != 0) {
                 if (i != j) {
                     swap(nums, i, j);
