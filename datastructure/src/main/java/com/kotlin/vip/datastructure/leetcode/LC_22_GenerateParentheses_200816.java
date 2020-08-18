@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Practiced by likaiyu on 2020/8/16.
  * Created by likaiyu on 2020/8/6.
  * 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合。
  * 输入：n = 3
@@ -15,7 +16,7 @@ import java.util.List;
  * "()()()"
  * ]
  */
-public class LC_22_GenerateParentheses_200806 {
+public class LC_22_GenerateParentheses_200816 {
 
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
@@ -23,6 +24,22 @@ public class LC_22_GenerateParentheses_200806 {
         _generateParentheses2(0, 0, n, "", result);
         return result;
     }
+
+    public void generate(int length,int position,String s,List<String> result) {
+        if (position == length) {
+            if (valid(s)) {
+                result.add(s);
+            } else {
+                return;
+            }
+        }
+
+        generate(length, position + 1, s + "(", result);
+        generate(length, position + 1, s + ")", result);
+
+    }
+
+
 
     private void _generateParentheses(int length, int pos, String s, List<String> result) {
         System.out.println(s);
@@ -76,7 +93,7 @@ public class LC_22_GenerateParentheses_200806 {
     }
 
     public static void main(String[] args) {
-        LC_22_GenerateParentheses_200806 generateParentheses = new LC_22_GenerateParentheses_200806();
+        LC_22_GenerateParentheses_200816 generateParentheses = new LC_22_GenerateParentheses_200816();
         List<String> list = generateParentheses.generateParenthesis(2);
         System.out.println(list);
     }
