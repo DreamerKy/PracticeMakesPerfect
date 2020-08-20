@@ -1,19 +1,27 @@
 package com.kotlin.vip.datastructure.leetcode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Practiced by likaiyu on 2020/8/20.
  * Created by likaiyu on 2020/1/23.
  *
  * 给定一个整数数组 nums 和一个目标值 target，
  * 请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
  *
  */
-public class LC_1_TwoSum_200123 {
+public class LC_1_TwoSum_200820 {
+
+    public static void main(String[] args) {
+        int[] nums = {2, 7, 11, 15, 1, 8};
+        int[] ints = twoSumUnSortedArray(nums, 9);
+        System.out.println(Arrays.toString(ints));
+    }
 
 
-    public int[] twoSumUnSortedArray(int[] nums,int target) {
+    public static int[] twoSumUnSortedArray(int[] nums,int target) {
         if (nums == null || nums.length < 2) {
             throw new IllegalArgumentException("nums can not be null");
         }
@@ -40,6 +48,22 @@ public class LC_1_TwoSum_200123 {
         }
         throw new IllegalArgumentException("can not find result");
     }
+
+    public int[] twoSumm(int[] nums,int target) {
+        if (nums == null || nums.length < 2) {
+            throw new IllegalArgumentException(" Illegal Argument");
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        throw new IllegalArgumentException("No Result");
+    }
+
 
     public int[] twoSum1(int[] numbers, int target) {
 

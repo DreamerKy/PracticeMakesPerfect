@@ -2,6 +2,7 @@ package com.kotlin.vip.datastructure.leetcode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
 
 /**
  * Created by likaiyu on 2020/8/16.
@@ -19,8 +20,32 @@ public class LC_84_LargestRectangleInHistogram_200816 {
 
     public static void main(String[] args) {
         int[] nums = {2, 1, 5, 6, 2, 3};
-        System.out.println(largestRectangleArea(nums));
+        System.out.println(largestRectangleAreaOptimizerMore(nums));
     }
+
+    /**
+     * 更优解法
+     */
+
+    public static int largestRectangleAreaOptimizerMore(int[] heights) {
+        int len = heights.length;
+        if (len == 0) return 0;
+        if (len == 1) return heights[0];
+        int[] temp = new int[len + 2];
+        System.arraycopy(heights, 0, temp, 1, heights.length);
+        Deque<Integer> stack = new ArrayDeque<>();
+        int res = 0;
+        for (int i = 0; i < temp.length; i++) {
+            while (!stack.isEmpty() && temp[i] < temp[stack.peek()]) {
+                int h = temp[stack.pop()];
+                res = Math.max(res, h * (i - stack.peek() - 1));
+            }
+            stack.push(i);
+        }
+        return res;
+
+    }
+
 
     /**
      * 优化法
@@ -31,39 +56,89 @@ public class LC_84_LargestRectangleInHistogram_200816 {
         if (len == 0) return 0;
         if (len == 1) return heights[0];
         int res = 0;
-        Deque<Integer> stack = new ArrayDeque<>(len);
-        for (int i = 0; i < len; i++) {
-            while (!stack.isEmpty() && heights[i] < heights[stack.peekLast()]) {
-                int curHeight = heights[stack.pollLast()];
-                while (!stack.isEmpty() && heights[stack.peekLast()] == curHeight) {
-                    stack.pollLast();
+        Stack<Integer> integers = new Stack<>();
+        //遍历每一项
+        for(int i = 0;i<heights.length;i++) {
+            while (!integers.isEmpty() && heights[i] < heights[integers.peek()]) {
+                int top = heights[integers.pop()];
+                while (!integers.isEmpty() && heights[integers.peek()] == top) {
+                    integers.pop();
                 }
-
-                int curWidth;
-                if (stack.isEmpty()) {
-                    curWidth = i;
+                int width = 0;
+                if (integers.isEmpty()) {
+                    width = i;
                 } else {
-                    curWidth = i - stack.peekLast() - 1;
+                    width = i - integers.peek() - 1;
                 }
-                res = Math.max(res, curHeight * curWidth);
-            }
-            stack.addLast(i);
-        }
-        while (!stack.isEmpty()) {
-            int curHeight = heights[stack.pollLast()];
-            while (!stack.isEmpty() && heights[stack.peekLast()] == curHeight) {
-                stack.pollLast();
-            }
 
-            int curWidth;
-            if (stack.isEmpty()) {
-                curWidth = len;
+                res = Math.max(res, top * width);
+            }
+            integers.add(i);
+        }
+
+        while (!integers.isEmpty()) {
+            int top = heights[integers.pop()];
+            while (!integers.isEmpty() && heights[integers.peek()] == top) {
+                integers.pop();
+            }
+            int width = 0;
+            if (integers.isEmpty()) {
+                width = len;
             } else {
-                curWidth = len - stack.peekLast() - 1;
+                width = len - integers.peek() - 1;
             }
-            res = Math.max(res, curHeight * curWidth);
 
+            res = Math.max(res, top * width);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//        Deque<Integer> stack = new ArrayDeque<>(len);
+//        for (int i = 0; i < len; i++) {
+//            while (!stack.isEmpty() && heights[i] < heights[stack.peekLast()]) {
+//                int curHeight = heights[stack.pollLast()];
+//                while (!stack.isEmpty() && heights[stack.peekLast()] == curHeight) {
+//                    stack.pollLast();
+//                }
+//
+//                int curWidth;
+//                if (stack.isEmpty()) {
+//                    curWidth = i;
+//                } else {
+//                    curWidth = i - stack.peekLast() - 1;
+//                }
+//                res = Math.max(res, curHeight * curWidth);
+//            }
+//            stack.addLast(i);
+//        }
+//        while (!stack.isEmpty()) {
+//            int curHeight = heights[stack.pollLast()];
+//            while (!stack.isEmpty() && heights[stack.peekLast()] == curHeight) {
+//                stack.pollLast();
+//            }
+//
+//            int curWidth;
+//            if (stack.isEmpty()) {
+//                curWidth = len;
+//            } else {
+//                curWidth = len - stack.peekLast() - 1;
+//            }
+//            res = Math.max(res, curHeight * curWidth);
+//
+//        }
         return res;
     }
 
@@ -72,8 +147,8 @@ public class LC_84_LargestRectangleInHistogram_200816 {
      *
      * @param heights
      * @return 遍历数组中每一项，要算该柱子勾勒出来的最大面积，就要
-     * 向左找到最左一根高度大于等于该柱子的柱子
-     * 向右找到最右一根高度大于等于该柱子的柱子
+     * 向左找高度大于等于该柱子的柱子，碰到低于的就停止
+     * 向右找高度大于等于该柱子的柱子，碰到低于的就停止
      */
     public static int largestRectangleArea(int[] heights) {
         if (heights == null || heights.length == 0) {

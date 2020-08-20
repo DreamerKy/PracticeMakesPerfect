@@ -12,7 +12,7 @@ class Test {
 
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
-        persons.add(new Person("人"));
+        persons.add(new Person("人"));persons.add(new Person("人"));
         persons.add(new Coder("码农"));
         persons.add(new Doctor("医生"));
         persons.add(new Engineer("工程师1"));
