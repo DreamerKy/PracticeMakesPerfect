@@ -1,45 +1,45 @@
-两数之和题目： https://leetcode-cn.com/problems/two-sum/									    Done
+两数之和题目： https://leetcode-cn.com/problems/two-sum/									        Done
 
 # Array 实战题目
-* https://leetcode-cn.com/problems/container-with-most-water/								Done
-* https://leetcode-cn.com/problems/move-zeroes/												Done
-* https://leetcode.com/problems/climbing-stairs/											Done
-* https://leetcode-cn.com/problems/3sum/ (高频老题）										    Done
+* https://leetcode-cn.com/problems/container-with-most-water/								    Done
+* https://leetcode-cn.com/problems/move-zeroes/												    Done
+* https://leetcode.com/problems/climbing-stairs/											    Done
+* https://leetcode-cn.com/problems/3sum/ (高频老题）										        Done
 
 # Linked List 实战题目
-* https://leetcode.com/problems/reverse-linked-list/										Done
-* https://leetcode.com/problems/swap-nodes-in-pairs											Done
-* https://leetcode.com/problems/linked-list-cycle											Done
-* https://leetcode.com/problems/linked-list-cycle-ii										Done
-* https://leetcode.com/problems/reverse-nodes-in-k-group/									Done
+* https://leetcode.com/problems/reverse-linked-list/										    Done
+* https://leetcode.com/problems/swap-nodes-in-pairs											    Done
+* https://leetcode.com/problems/linked-list-cycle											    Done
+* https://leetcode.com/problems/linked-list-cycle-ii										    Done
+* https://leetcode.com/problems/reverse-nodes-in-k-group/									    Done
 
 # 课后作业
-* https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/						Done
-* https://leetcode-cn.com/problems/rotate-array/											Done
-* https://leetcode-cn.com/problems/merge-two-sorted-lists/									Done
-* https://leetcode-cn.com/problems/merge-sorted-array/										Done
-* https://leetcode-cn.com/problems/two-sum/													Done
-* https://leetcode-cn.com/problems/move-zeroes/												Done
-* https://leetcode-cn.com/problems/plus-one/												Done
+* https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/						    Done
+* https://leetcode-cn.com/problems/rotate-array/											    Done
+* https://leetcode-cn.com/problems/merge-two-sorted-lists/									    Done
+* https://leetcode-cn.com/problems/merge-sorted-array/										    Done
+* https://leetcode-cn.com/problems/two-sum/													    Done
+* https://leetcode-cn.com/problems/move-zeroes/												    Done
+* https://leetcode-cn.com/problems/plus-one/												    Done
 
  预习题目（栈、队列、优先队列、双端队列）
-* https://leetcode-cn.com/problems/valid-parentheses/										Done
-* https://leetcode-cn.com/problems/min-stack/												Done
+* https://leetcode-cn.com/problems/valid-parentheses/										    Done
+* https://leetcode-cn.com/problems/min-stack/												    Done
 
 # 实战题目
-* https://leetcode-cn.com/problems/largest-rectangle-in-histogram							Done
-* https://leetcode-cn.com/problems/sliding-window-maximum									Done
+* https://leetcode-cn.com/problems/largest-rectangle-in-histogram							    Done
+* https://leetcode-cn.com/problems/sliding-window-maximum									    Done
 
 # 课后作业
 * 用 add first 或 add last 这套新的 API 改写 Deque 的代码
 * 分析 Queue 和 Priority Queue 的源码
-* https://leetcode.com/problems/design-circular-deque									    Done
-* https://leetcode.com/problems/trapping-rain-water/								        Done
+* https://leetcode.com/problems/design-circular-deque									        Done
+* https://leetcode.com/problems/trapping-rain-water/								            Done
 
 # 实战题目 / 课后作业（哈希表、映射、集合）
-* https://leetcode-cn.com/problems/valid-anagram/description/								Done
-* https://leetcode-cn.com/problems/group-anagrams/								            Done
-* https://leetcode-cn.com/problems/two-sum/description/
+* https://leetcode-cn.com/problems/valid-anagram/description/								    Done
+* https://leetcode-cn.com/problems/group-anagrams/								                Done
+* https://leetcode-cn.com/problems/two-sum/description/						                    Done
 
 # 参考链接
 * [树的遍历 Demo](https://visualgo.net/zh/bst)
@@ -211,8 +211,8 @@
 * https://leetcode-cn.com/problems/climbing-stairs/
 * https://leetcode-cn.com/problems/generate-parentheses/
 * https://leetcode-cn.com/problems/n-queens
-* https://leetcode-cn.com/problems/valid-sudoku/description/
-* https://leetcode-cn.com/problems/sudoku-solver/#/description
+* https://leetcode-cn.com/problems/valid-sudoku/description/					                Done
+* https://leetcode-cn.com/problems/sudoku-solver/#/description					                Done
 
 # 实战题目
 * https://leetcode-cn.com/problems/word-ladder/
@@ -227,7 +227,7 @@
 # 实战题目
 * https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/
 * https://leetcode-cn.com/problems/sliding-puzzle/
-* https://leetcode-cn.com/problems/sudoku-solver/
+* https://leetcode-cn.com/problems/sudoku-solver/					                            Done
 
 # 参考链接
 * [平衡树](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)
@@ -239,12 +239,12 @@
 * [N 皇后位运算代码示例](https://zh.wikihow.com/从十进制转换为二进制)
 
 # 实战题目 / 课后作业（位运算）
-* https://leetcode-cn.com/problems/number-of-1-bits/
-* https://leetcode-cn.com/problems/power-of-two/
-* https://leetcode-cn.com/problems/reverse-bits/
+* https://leetcode-cn.com/problems/number-of-1-bits/ 				                            Done
+* https://leetcode-cn.com/problems/power-of-two/				                                Done
+* https://leetcode-cn.com/problems/reverse-bits/				                                Done
 * https://leetcode-cn.com/problems/n-queens/description/
 * https://leetcode-cn.com/problems/n-queens-ii/description/
-* https://leetcode-cn.com/problems/counting-bits/description/
+* https://leetcode-cn.com/problems/counting-bits/description/                                   Done
 
 # 参考链接
 * [布隆过滤器的原理和实现](https://www.cnblogs.com/cpselvis/p/6265825.html)

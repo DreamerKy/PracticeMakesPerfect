@@ -21,6 +21,7 @@ import com.example.dreams.okhttp_download.OkHttpFileDownloader;
 import com.example.dreams.plugin.PluginActivity;
 import com.example.dreams.uiutils.UIUtils;
 import com.example.dreams.utils.Utils;
+import com.example.dreams.widget.ChoosePictureActivity;
 import com.example.dreams.widget.LoadingView;
 import com.example.dreams.widget.SlideLockView;
 import com.example.dreams.widget.circlepercentview.ProgressAnimateActivity;
@@ -442,6 +443,13 @@ public class PracticeMakesPerfectActivity extends BaseActivity implements DBOper
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(PracticeMakesPerfectActivity.this, FlipViewActivity.class));
+            }
+        });
+
+        findViewById(R.id.choose_picture).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PracticeMakesPerfectActivity.this, ChoosePictureActivity.class));
             }
         });
 

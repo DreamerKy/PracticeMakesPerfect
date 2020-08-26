@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * Practice by likaiyu on 2020/8/20.
  * Practice by likaiyu on 2020/8/16.
  * Created by likaiyu on 2020/8/9.
  *
@@ -23,7 +24,52 @@ import java.util.List;
  * ]
  *
  */
-public class LC_15_3Sum_200816 {
+public class LC_15_ThreeSum_200820 {
+
+
+    public List<List<Integer>> threeSumm(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (nums == null || nums.length < 3) {
+            return res;
+        }
+        Arrays.sort(nums);
+        int left;
+        int right;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                break;
+            }
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            left = i + 1;
+            right = nums.length - 1;
+            while (left < right) {
+                if (nums[left] + nums[right] + nums[i] == 0) {
+                    res.add(Arrays.asList(nums[left], nums[right], nums[i]));
+                    left++;
+                    right--;
+                    while (left < right && nums[left] == nums[left - 1]) {
+                        left++;
+                    }
+                    while (left < right && nums[right] == nums[right + 1]) {
+                        right--;
+                    }
+                } else if (nums[left] + nums[right] + nums[i] < 0) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+        }
+
+        return res;
+    }
+
+
+
+
+
 
     // 数组为null或者长度小于3，直接放回[]
     // 排序
@@ -37,8 +83,8 @@ public class LC_15_3Sum_200816 {
 
     public static void main(String[] args) {
         int[] nums = {-1, 0, 1, 2, -1, -4};
-        LC_15_3Sum_200816 threeSum = new LC_15_3Sum_200816();
-        List<List<Integer>> lists = threeSum.threeSum(nums);
+        LC_15_ThreeSum_200820 threeSum = new LC_15_ThreeSum_200820();
+        List<List<Integer>> lists = threeSum.threeSumm(nums);
         System.out.println(lists);
     }
 
