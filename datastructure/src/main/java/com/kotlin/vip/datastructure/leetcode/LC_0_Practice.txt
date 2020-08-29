@@ -315,14 +315,14 @@
 * [Atoi 代码示例](https://shimo.im/docs/KkDKkpWxjjrJXdpY/)
 
 # 字符串基础问题
-* https://leetcode-cn.com/problems/to-lower-case/
-* https://leetcode-cn.com/problems/length-of-last-word/
-* https://leetcode-cn.com/problems/jewels-and-stones/
-* https://leetcode-cn.com/problems/first-unique-character-in-a-string/
-* https://leetcode-cn.com/problems/string-to-integer-atoi/
+* https://leetcode-cn.com/problems/to-lower-case/		                                        Done
+* https://leetcode-cn.com/problems/length-of-last-word/                                         Done
+* https://leetcode-cn.com/problems/jewels-and-stones/                                           Done
+* https://leetcode-cn.com/problems/first-unique-character-in-a-string/                          Done
+* https://leetcode-cn.com/problems/string-to-integer-atoi/                                      Done
 
 # 字符串操作问题
-* https://leetcode-cn.com/problems/longest-common-prefix/description/
+* https://leetcode-cn.com/problems/longest-common-prefix/description/                           Done
 * https://leetcode-cn.com/problems/reverse-string
 * https://leetcode-cn.com/problems/reverse-string-ii/
 * https://leetcode-cn.com/problems/reverse-words-in-a-string/

@@ -16,8 +16,8 @@ public class LC_26_RemoveDuplicatesFromSortedArray_200810 {
 
     public static void main(String[] args) {
         int[] nums = {1, 1, 2};
-        int i = removeDuplicates(nums);
-        System.out.println(i);
+        int res = removeDuplicates(nums);
+        System.out.println(res);
     }
 
     public static int removeDuplicates(int[] nums) {

@@ -56,8 +56,8 @@ public class LC_7_ReverseInteger_200823 {
 
 
     public static void main(String[] args) {
-        int res = reverse(2147483647);
-        System.out.println(EXACTLY);
+        int res = reverse2(1200000);
+        System.out.println(res);
     }
 
     /**
@@ -79,4 +79,21 @@ public class LC_7_ReverseInteger_200823 {
         }
         return res;
     }
+
+    public static int reverse2(int num) {
+        int res = 0;
+
+        while (num != 0) {
+            int pop = num % 10;
+            num /= 10;
+            if (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && pop > 7)) {
+                return 0;
+            } else if (res < Integer.MIN_VALUE / 10 || (res == Integer.MIN_VALUE / 10 && pop < -8)) {
+                return 0;
+            }
+            res = res * 10 + pop;
+        }
+        return res;
+    }
+
 }
