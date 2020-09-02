@@ -323,9 +323,9 @@
 
 # 字符串操作问题
 * https://leetcode-cn.com/problems/longest-common-prefix/description/                           Done
-* https://leetcode-cn.com/problems/reverse-string
-* https://leetcode-cn.com/problems/reverse-string-ii/
-* https://leetcode-cn.com/problems/reverse-words-in-a-string/
+* https://leetcode-cn.com/problems/reverse-string                                               Done
+* https://leetcode-cn.com/problems/reverse-string-ii/                                           Done
+* https://leetcode-cn.com/problems/reverse-words-in-a-string/                                   Done
 * https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/
 * https://leetcode-cn.com/problems/reverse-only-letters/
 
