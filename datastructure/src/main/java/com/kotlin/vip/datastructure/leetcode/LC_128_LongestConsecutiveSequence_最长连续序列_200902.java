@@ -1,6 +1,8 @@
 package com.kotlin.vip.datastructure.leetcode;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by likaiyu on 2020/9/02.
@@ -17,9 +19,32 @@ import java.util.Arrays;
 public class LC_128_LongestConsecutiveSequence_最长连续序列_200902 {
 
     public static void main(String[] args) {
-        int[] nums = {0,-1};
-        int res = longestConsecutive(nums);
+        int[] nums = {100, 4, 200, 1, 3, 2};
+        int res = longestConsecutiveII(nums);
         System.out.println(res);
+    }
+
+    public static int longestConsecutiveII(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        Set<Integer> num_set = new HashSet<>();
+        for (int num : nums) {
+            num_set.add(num);
+        }
+        int longest = 0;
+        for (int num : num_set) {
+            if (!num_set.contains(num - 1)) {
+                int currentNum = num;
+                int current = 1;
+                while (num_set.contains(currentNum + 1)) {
+                    currentNum += 1;
+                    current += 1;
+                }
+                longest = Math.max(longest, current);
+            }
+        }
+        return longest;
     }
 
     public static int longestConsecutive(int[] nums) {

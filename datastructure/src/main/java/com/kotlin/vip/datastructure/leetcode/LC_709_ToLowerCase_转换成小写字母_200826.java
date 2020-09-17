@@ -19,6 +19,24 @@ public class LC_709_ToLowerCase_转换成小写字母_200826 {
         System.out.println(res);
     }
 
+    public static String toLowerCaseII(String str) {
+        if (str == null || str.length() == 0) {
+            return "";
+        }
+        char[] charArray = str.toCharArray();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char c : charArray) {
+            if (c >= 'A' && c <= 'Z') {
+                stringBuilder.append((char) (c + 32));
+            } else {
+                stringBuilder.append(c);
+            }
+        }
+        return stringBuilder.toString();
+    }
+
+
+
     public static String toLowerCase(String str) {
         if (str == null || str.equals("")) {
             return "";

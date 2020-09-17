@@ -1,71 +1,51 @@
 package com.kotlin.vip.datastructure.leetcode;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Queue;
+import java.util.Map;
 
 /**
- * Created by likaiyu on 2020/8/15.
+ * Created by likaiyu on 2020/09/06.
  *
- * 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
+ * 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
  *
- * 二叉树：[3,9,20,null,null,15,7],
+ * 给定有序数组: [-10,-3,0,5,9],
  *
- *     3
- *    / \
- *   9  20
- *     /  \
- *    15   7
+ * 一个可能的答案是：[0,-3,9,-10,null,5]，它可以表示下面这个高度平衡二叉搜索树：
  *
- * [
- *   [3],
- *   [9,20],
- *   [15,7]
- * ]
+ *       0
+ *      / \
+ *    -3   9
+ *    /   /
+ *  -10  5
+ *
  *
  */
-public class LC_102_BInaryTreeLevelOrderTraversal_二叉树的层序遍历_200814 {
+public class LC_108_ConvertSortedArrayToBinarySearchTree_将有序数组转换为二叉搜索树_200906 {
 
     public static void main(String[] args) {
-        TreeNode _3 = new TreeNode(3);
-        TreeNode _9 = new TreeNode(9);
-        TreeNode _20 = new TreeNode(20);
-        TreeNode _15 = new TreeNode(15);
-        TreeNode _7 = new TreeNode(7);
-
-        _3.left = _9;
-        _3.right = _20;
-        _20.left = _15;
-        _20.right = _7;
-
-        System.out.println(levelOrderII(_3));
+        int[] nums = {-10, -3, 0, 5, 9};
+        TreeNode root = sortedArrayToBST(nums);
+        System.out.println(levelOrder(root));
     }
 
-    public static List<List<Integer>> levelOrderII(TreeNode root) {
-        List<List<Integer>> result = new LinkedList<>();
-        if (root == null) return result;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            List<Integer> level = new ArrayList<>();
-            int count = queue.size();
-            for (int i = 0; i < count; i++) {
-                TreeNode node = queue.poll();
-                level.add(node.val);
-                if (node.left != null) {
-                    queue.add(node.left);
-                }
-                if (node.right != null) {
-                    queue.add(node.right);
-                }
-            }
-            result.add(level);
+    public static TreeNode sortedArrayToBST(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        int length = nums.length;
+        return buildTreeHelper(nums, 0, length - 1);
+    }
+
+    public static TreeNode buildTreeHelper(int[] nums, int left, int right) {
+        if (left > right) {
+            return null;
         }
-        return result;
+        int mid = left + (right - left) / 2;
+        TreeNode current = new TreeNode(nums[mid]);
+        current.left = buildTreeHelper(nums, left, mid - 1);
+        current.right = buildTreeHelper(nums, mid + 1,right);
+        return current;
     }
-
-
 
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> finalResult = new ArrayList<>();
@@ -103,7 +83,6 @@ public class LC_102_BInaryTreeLevelOrderTraversal_二叉树的层序遍历_20081
         }
         return subResult;
     }
-
 
     public static class TreeNode {
         int val;
