@@ -36,7 +36,7 @@ public class LC_51_NQueens_N皇后_200916 {
 
     public static void main(String[] args) {
         long l = System.currentTimeMillis();
-        List<List<String>> lists = solveNQueens(8);
+        List<List<String>> lists = solveNQueens(4);
         System.out.println(lists);
         System.out.println((System.currentTimeMillis() - l) / 1000);
     }
@@ -48,7 +48,7 @@ public class LC_51_NQueens_N皇后_200916 {
         for (char[] chars : board) {
             Arrays.fill(chars, '.');
         }
-        backTrack(board, 0);
+        backTrackII(board, 0);
         return res;
     }
 

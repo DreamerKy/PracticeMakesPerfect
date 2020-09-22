@@ -1,5 +1,10 @@
 package com.kotlin.vip.datastructure.leetcode;
 
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
+
 /**
  * 常见算法、数据结构遍历方式
  * Created by likaiyu on 2020/9/5.
@@ -42,6 +47,10 @@ class A_Framework {
     class TreeNode {
         int val;
         TreeNode left, right;
+
+        public TreeNode[] adj() {
+            return new TreeNode[0];
+        }
     }
 
     void traverse(TreeNode root) {
@@ -89,6 +98,46 @@ class A_Framework {
 
     */
 
+    /**
+     * BFS框架
+     * 计算起点 start 到终点 target 的最近距离
+     */
+
+    int BFS(TreeNode start, TreeNode target) {
+        //核心数据结构
+        Queue<TreeNode> q = new LinkedList<>();
+        //避免走回头路
+        Set<TreeNode> visited = new HashSet<>();
+
+        //起点加入队列
+        q.offer(start);
+        visited.add(start);
+        //记录扩散步数
+        int step = 0;
+
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            //将当前队列里的所有节点往四周扩散
+            for (int i = 0; i < sz; i++) {
+                TreeNode cur = q.poll();
+                //判断是否到达终点
+                if (cur.val == target.val) {
+                    return step;
+                }
+                //将 cur 的相邻节点加入队列
+                for (TreeNode node : cur.adj()) {
+                    if (!visited.contains(node)) {
+                        q.offer(node);
+                        visited.add(node);
+                    }
+                }
+            }
+            //更新步数
+            step++;
+        }
+        // 找不到结果
+        return -1;
+    }
 
 
 

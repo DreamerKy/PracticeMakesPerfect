@@ -47,6 +47,18 @@ public class LC_104_TheDepthOfBinaryTree_二叉树的最大深度_200812 {
         return root == null ? 0 : Math.max(maxDepth2(root.left), maxDepth2(root.right)) + 1;
     }
 
+    public int maxDepthh(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftDepth = maxDepthh(root.left);
+        int rightDepth = maxDepthh(root.right);
+        int max = Math.max(leftDepth, rightDepth);
+        return max + 1;
+    }
+
+
+
    public class TreeNode{
         int val;
         TreeNode left;

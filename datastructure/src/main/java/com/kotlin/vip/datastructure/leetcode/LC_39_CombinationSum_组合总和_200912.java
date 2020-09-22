@@ -39,13 +39,42 @@ import java.util.List;
 public class LC_39_CombinationSum_组合总和_200912 {
 
     public static void main(String[] args) {
-        int[] candidates = {2, 3, 6, 7};
-        int target = 7;
-//        List<List<Integer>> result = combinationSum(candidates, target);
-        List<List<Integer>> result2 = combinationSumII(candidates, target);
-//        System.out.println(result);
-        System.out.println(result2);
+        int[] candidates = {1,2,3};
+        int target = 4;
+        List<List<Integer>> result = combinationSum(candidates, target);
+//        List<List<Integer>> result = combinationSumIII(candidates, target);
+        System.out.println(result);
     }
+
+
+	public static List<List<Integer>> combinationSumIII(int[] candidates, int target){
+		List<List<Integer>> result = new ArrayList<>();
+		if(candidates == null || candidates.length == 0){
+			return result;
+		}
+		Deque<Integer> path = new ArrayDeque<>();
+		Arrays.sort(candidates);
+		dfsIII(candidates,path,0,candidates.length,target,result);
+		return result;
+	}
+
+	public static void dfsIII(int[] candidates,Deque path,int begin,int end,int target, List<List<Integer>> result) {
+        if (target == 0) {
+            result.add(new ArrayList(path));
+            return;
+        }
+        for (int i = begin; i < end; i++) {
+            if (target - candidates[i] < 0) {
+                break;
+            }
+            path.addLast(candidates[i]);
+            dfsIII(candidates, path, i, end, target-candidates[i], result);
+            path.removeLast();
+        }
+    }
+
+
+
 
     public static List<List<Integer>> combinationSumII(int[] candidates, int target){
         int len = candidates.length;

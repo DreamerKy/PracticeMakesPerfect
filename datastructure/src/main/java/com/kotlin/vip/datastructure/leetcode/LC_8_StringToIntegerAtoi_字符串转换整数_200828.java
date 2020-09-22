@@ -48,9 +48,51 @@ package com.kotlin.vip.datastructure.leetcode;
 public class LC_8_StringToIntegerAtoi_字符串转换整数_200828 {
 
     public static void main(String[] args) {
-        int res = mAtoi2("-2147483649");
+        int res = mAtoi3("4193 with words");
         System.out.println(res);
     }
+
+    public static int mAtoi3(String str) {
+        if (str == null || str.length() == 0) {
+            return 0;
+        }
+        char[] chars = str.toCharArray();
+        int length = chars.length;
+        int index = 0;
+        int result = 0;
+        while (index < length && chars[index] == ' ') {
+            index++;
+        }
+        if (index == length) {
+            return 0;
+        }
+
+        int flag = 1;
+        if (chars[index] == '+') {
+            index++;
+        } else if (chars[index] == '-') {
+            flag = -1;
+            index++;
+        }
+
+        for (int i = index; i < length; i++) {
+            char cur = chars[i];
+            int curInt = cur - '0';
+            if (curInt < 0 || curInt > 9) {
+                break;
+            }
+            if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && curInt > Integer.MAX_VALUE % 10)) {
+                return Integer.MAX_VALUE;
+            }
+
+            if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && curInt > -(Integer.MIN_VALUE % 10))) {
+                return Integer.MIN_VALUE;
+            }
+            result = result * 10 + flag * curInt;
+        }
+        return result;
+    }
+
 
     public static int mAtoi2(String str) {
         if (str == null || str.length() == 0) {

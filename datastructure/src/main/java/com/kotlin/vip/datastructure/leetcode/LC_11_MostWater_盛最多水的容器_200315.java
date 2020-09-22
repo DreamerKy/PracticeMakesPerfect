@@ -15,7 +15,21 @@ public class LC_11_MostWater_盛最多水的容器_200315 {
 
     public static void main(String[] args) {
         int[] arr = {1, 8, 6, 2, 5, 4, 8, 3, 7};
-        System.out.println(getMoreWater(arr));
+        System.out.println(getMoreWater2(arr));
+    }
+
+    public static int getMoreWater2(int[] height) {
+        if (height == null || height.length == 0) {
+            return 0;
+        }
+        int j = height.length - 1;
+        int max = 0;
+        for (int i = 0; i < j; ) {
+            int minHeight = height[i] > height[j] ? height[j--] : height[i++];
+            max = Math.max(max, minHeight * (j + 1 - i));
+        }
+        return max;
+
     }
 
 

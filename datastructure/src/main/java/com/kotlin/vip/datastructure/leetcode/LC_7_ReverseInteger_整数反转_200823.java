@@ -56,9 +56,39 @@ public class LC_7_ReverseInteger_整数反转_200823 {
 
 
     public static void main(String[] args) {
-        int res = reverse2(1200000);
+        int res = reverse3(-123);
         System.out.println(res);
     }
+
+    /**
+     * 正负都有可能
+     * @param x
+     * @return
+     */
+    public static int reverse3(int x) {
+        int result = 0;
+        int temp = x;
+        while (temp != 0) {
+            int last = temp % 10;
+            if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && last > Integer.MAX_VALUE % 10)) {
+                return 0;
+            }
+            if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && temp < Integer.MIN_VALUE % 10)) {
+                return 0;
+            }
+            temp /= 10;
+            result = result * 10 + last;
+        }
+        return result;
+    }
+
+
+
+
+
+
+
+
 
     /**
      * public static final int MIN_VALUE = -2147483648;

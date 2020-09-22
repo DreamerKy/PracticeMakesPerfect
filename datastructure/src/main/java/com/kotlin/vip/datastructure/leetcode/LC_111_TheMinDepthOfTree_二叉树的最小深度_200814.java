@@ -1,5 +1,8 @@
 package com.kotlin.vip.datastructure.leetcode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Practiced by likaiyu on 2020/8/14.
  * Created by likaiyu on 2020/3/14.
@@ -14,6 +17,30 @@ package com.kotlin.vip.datastructure.leetcode;
  *
  */
 public class LC_111_TheMinDepthOfTree_二叉树的最小深度_200814 {
+
+    public int minDepth3(TreeNode root){
+        if(root == null) return 0;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int depth = 1;
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for(int i = 0; i < size; i++){
+                TreeNode current = queue.poll();
+                if (current.left == null && current.right == null) { // 到达终点
+                    return depth;
+                }
+                if(current.left != null){
+                    queue.offer(current.left);
+                }
+                if(current.right != null){
+                    queue.offer(current.right);
+                }
+            }
+            depth ++;
+        }
+        return depth;
+    }
 
     public int minDepth2(TreeNode root) {
         if (root == null) return 0;

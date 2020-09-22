@@ -1,6 +1,5 @@
 package com.netease.stander;
 
-import android.app.Activity;
 import android.app.Service;
 import android.content.Intent;
 
